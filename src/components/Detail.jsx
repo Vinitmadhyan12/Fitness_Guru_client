@@ -33,7 +33,7 @@ export default function Detail({ exerciseDetail, currUser, id }) {
 
         if (currUser) {
             const u_id = currUser._id
-            axios.post("http://localhost:3000/addtoroutine", { u_id, exerciseDetail })
+            axios.post("https://fitness-guru-server.vercel.app/addtoroutine", { u_id, exerciseDetail })
                 .then(res => {
                     alert(res.data)
 

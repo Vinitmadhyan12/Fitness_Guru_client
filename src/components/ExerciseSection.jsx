@@ -12,7 +12,7 @@ export default function ExerciseSection({ variation, currUser, setCount }) {
     const removeFromRoutine = () => {
         const u_id = currUser._id
         // const e_id = variation._id;
-        axios.post("http://localhost:3000/removeroutine", { u_id, variation })
+        axios.post("https://fitness-guru-server.vercel.app/removeroutine", { u_id, variation })
             .then((res) => {
                 alert(res.data)
                 setCount(c => c + 1)

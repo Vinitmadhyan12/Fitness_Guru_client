@@ -15,7 +15,7 @@ export default function ExerciseDetail({ setExercises, exercises, currUser, setC
 
 
     useEffect(() => {
-        axios.get('http://localhost:3000/getExercises')
+        axios.get('https://fitness-guru-server.vercel.app/getExercises')
             .then(res => setExercises(res.data))
             .catch(err => console.log(err))
 

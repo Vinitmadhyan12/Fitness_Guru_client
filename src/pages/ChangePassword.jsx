@@ -28,7 +28,7 @@ const ChangePassword = ({ currUser, setCurrUser }) => {
         if (errors.username === "" && errors.oldpassword === "" && errors.newpassword === "") {
             const { username, oldpassword, newpassword } = user;
 
-            axios.put(`http://localhost:3000/update`, { username, oldpassword, newpassword })
+            axios.put(`https://fitness-guru-server.vercel.app/update`, { username, oldpassword, newpassword })
                 .then(res => {
 
                     setCurrUser({})

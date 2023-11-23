@@ -9,7 +9,7 @@ export default function Trainer({ currUser }) {
     const [trainer, setTrainer] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:3000/getTrainers')
+        axios.get('https://fitness-guru-server-hgnhwiz2i-vinits-projects-006eb735.vercel.app/getTrainers')
             .then(res => {
                 setTrainer(res.data)
                 // console.log(res.data)
@@ -23,7 +23,7 @@ export default function Trainer({ currUser }) {
     const addtrainer = (t_id) => {
         if (currUser._id) {
             const u_id = currUser._id
-            axios.post("http://localhost:3000/addtrainer", { u_id, t_id })
+            axios.post("https://fitness-guru-server.vercel.app/addtrainer", { u_id, t_id })
                 .then(res => {
                     alert(res.data)
                 })

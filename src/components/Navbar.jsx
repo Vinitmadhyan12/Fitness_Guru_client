@@ -10,7 +10,7 @@ export default function Navbar({ currUser, setCurrUser, check, setToken }) {
     const handleLogout = () => {
         if (currUser.hash) {
             axios
-                .get('http://localhost:3000/logout')
+                .get('https://fitness-guru-server.vercel.app/logout')
                 .then((res) => {
                     setCurrUser({});
                     localStorage.removeItem('token');

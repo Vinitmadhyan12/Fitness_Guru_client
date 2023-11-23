@@ -17,7 +17,7 @@ export default function Profile({ currUser, setCurrUser, setToken }) {
 
     const deleteuser = () => {
 
-        axios.delete(`http://localhost:3000/deleteUser/${currUser._id}`)
+        axios.delete(`https://fitness-guru-server.vercel.app/deleteUser/${currUser._id}`)
             .then(res => {
                 setCurrUser({})
                 navigate('/')
@@ -31,7 +31,7 @@ export default function Profile({ currUser, setCurrUser, setToken }) {
 
         if (currUser) {
             const u_id = currUser._id
-            axios.post("http://localhost:3000/findexercise", { u_id })
+            axios.post("https://fitness-guru-server.vercel.app/findexercise", { u_id })
                 .then(res => {
                     // console.log(res.data)
                     setExerciseRoutine(res.data)
@@ -41,7 +41,7 @@ export default function Profile({ currUser, setCurrUser, setToken }) {
         }
         if (currUser) {
             const u_id = currUser._id
-            axios.post("http://localhost:3000/findtrainer", { u_id })
+            axios.post("https://fitness-guru-server.vercel.app/findtrainer", { u_id })
                 .then(res => {
                     // console.log(res.data)
                     setTrainer(res.data)

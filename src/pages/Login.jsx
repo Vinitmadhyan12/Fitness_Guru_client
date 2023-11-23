@@ -31,7 +31,7 @@ const Login = ({ setCurrUser, setToken }) => {
         if (errors.username === "" && errors.password === "") {
             const { username, password } = user;
 
-            axios.post("http://localhost:3000/login", { username, password })
+            axios.post("https://fitness-guru-server.vercel.app/login", { username, password })
                 .then(res => {
                     // console.log(res.data)
                     const { token, user } = res.data;

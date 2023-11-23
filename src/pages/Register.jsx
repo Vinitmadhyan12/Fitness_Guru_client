@@ -28,7 +28,7 @@ const Register = () => {
         if (errors.username === "" && errors.email === "" && errors.password === "") {
             const { username, email, password } = user;
 
-            axios.post("http://localhost:3000/register", { username, email, password })
+            axios.post("https://fitness-guru-server.vercel.app/register", { username, email, password })
                 .then(res => {
                     toast.success('User registered successfully', {
                         position: "top-right",

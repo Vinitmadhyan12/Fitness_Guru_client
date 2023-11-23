@@ -40,8 +40,10 @@ function App() {
     console.log(process.env.REACT_APP_BASE_URL)
 
 
-    axios.get('http://localhost:3000/getExercises')
-      .then(exercises => setExercises(exercises.data))
+    axios.get('https://fitness-guru-server.vercel.app/getExercises')
+      .then(exercises => {
+        setExercises(exercises.data)
+      })
       .catch(err => console.log(err))
 
   }, [])

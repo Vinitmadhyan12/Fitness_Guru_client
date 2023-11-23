@@ -12,6 +12,7 @@ const LandingPage = ({ exercises, setExercises, setSelectedmuscle, setSearchExer
 
     setToken(localStorage.getItem('token') || '')
 
+
     useEffect(() => {
         if (token) {
             verifyToken();
@@ -20,7 +21,7 @@ const LandingPage = ({ exercises, setExercises, setSelectedmuscle, setSearchExer
 
     const verifyToken = async () => {
         try {
-            const response = await axios.get('http://localhost:3000/protected', {
+            const response = await axios.get('https://fitness-guru-server.vercel.app/protected', {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
