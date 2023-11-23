@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Doppio+One:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cantarell:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jaldi:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Degular+Display+Demo:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Radio+Canada:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Puritan:wght@400&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply leading-[normal] m-0;
+}
+
+*,
+::before,
+::after {
+  border-width: 0;
+}
